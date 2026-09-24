@@ -1,0 +1,34 @@
+IMAX QUEST — SALAS ONLINE
+
+COMO OS JOGADORES USAM
+1. Todos abrem o mesmo endereço público do jogo.
+2. O primeiro participante clica em CRIAR SALA e se torna o ADM.
+3. O jogo gera um código de 6 caracteres e um link de convite.
+4. O ADM toca em COMPARTILHAR LINK e envia pelo WhatsApp ou outro aplicativo.
+5. Quem abrir o link informa o nome e clica em ENTRAR COM CÓDIGO.
+
+Não é necessário estar na mesma internet. Depois que este pacote for publicado
+em um servidor web, os jogadores precisam somente do link.
+
+PUBLICAÇÃO SIMPLES NO RENDER
+1. Crie gratuitamente uma conta em https://render.com.
+2. Envie estes arquivos para um repositório no GitHub.
+3. No Render, escolha New + Blueprint e selecione o repositório.
+4. O arquivo render.yaml configura o serviço automaticamente.
+5. Após a publicação, abra o endereço fornecido pelo Render.
+
+OUTRAS HOSPEDAGENS
+O projeto também funciona em Railway, Fly.io ou qualquer hospedagem Node.js que
+aceite WebSocket. O comando é npm start e a porta vem da variável PORT.
+Se a plataforma fornecer endereço fixo, configure PUBLIC_BASE_URL com esse URL.
+
+TESTE NO COMPUTADOR
+npm install
+npm start
+Depois abra http://localhost:3000
+
+PERMISSÕES
+- Todos entram como jogadores.
+- O criador da sala recebe a tag (ADM).
+- Somente o ADM pode alternar entre Jogador e Espectador.
+- Cada sala possui jogadores, ranking e acompanhamento separados.
