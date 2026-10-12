@@ -1,0 +1,10 @@
+{
+  "name": "imax-quest-multiplayer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor multiplayer com salas online do IMAX Quest",
+  "engines": { "node": ">=18" },
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "ws": "^8.18.0" }
+}

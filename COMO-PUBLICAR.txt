@@ -6,6 +6,20 @@ COMO OS JOGADORES USAM
 3. O jogo gera um código de 6 caracteres e um link de convite.
 4. O ADM toca em COMPARTILHAR LINK e envia pelo WhatsApp ou outro aplicativo.
 5. Quem abrir o link informa o nome e clica em ENTRAR COM CÓDIGO.
+6. Todos aguardam no lobby. Somente o ADM pode clicar em COMEÇAR PARTIDA.
+7. O jogo libera o percurso após a contagem sincronizada 3, 2, 1.
+
+O ADM pode iniciar sozinho, sem convidados, ou com qualquer quantidade de
+jogadores conectados à sala. Não existe quantidade mínima para começar.
+
+IMPORTANTE
+- Abrir somente o arquivo HTML não inicia o servidor multiplayer.
+- Se o servidor não for encontrado, o botão CRIAR SALA ativa automaticamente
+  o MODO LOCAL, permitindo jogar sozinho do começo ao fim, inclusive o chefe.
+- Para outras pessoas entrarem por código ou link, publique este pacote completo
+  ou execute npm install e npm start antes de abrir o endereço do jogo.
+- O botão COMEÇAR PARTIDA possui confirmação dupla: primeiro pelo WebSocket e,
+  se a resposta em tempo real atrasar, pela rota HTTP protegida do próprio ADM.
 
 Não é necessário estar na mesma internet. Depois que este pacote for publicado
 em um servidor web, os jogadores precisam somente do link.
@@ -31,4 +45,17 @@ PERMISSÕES
 - Todos entram como jogadores.
 - O criador da sala recebe a tag (ADM).
 - Somente o ADM pode alternar entre Jogador e Espectador.
-- Cada sala possui jogadores, ranking e acompanhamento separados.
+- Somente o ADM vê o ranking e o pódio finais da sala.
+- Cada jogador enxerga seu próprio bloco em cor forte; os demais aparecem
+  transparentes, mantendo a identificação individual sem poluir a tela.
+- Cada sala possui jogadores e acompanhamento separados.
+
+DESAFIO DO CICLOPE
+- O percurso ampliado possui 10 questões obrigatórias e checkpoints protegidos.
+- Plataformas móveis, lasers, serras, prensas, espinhos e fossos criam rotas
+  diferentes sem posicionar o renascimento dentro de uma zona de dano.
+- Durante o chefe, uma questão coletiva aparece a cada 10 segundos.
+- A rodada dura 7 segundos e considera os jogadores ativos na arena.
+- Se mais de 30% acertarem, o Ciclope perde 35 HP para toda a sala.
+- Os pulos durante a vulnerabilidade continuam causando 10 HP de dano.
+- O Ciclope possui 900 HP, calibrados para uma luta de aproximadamente 3 minutos.
